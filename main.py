@@ -3,12 +3,11 @@ import requests, json
 
 
 def request_data():
-	lat = '44.836151'
-	lon = '-0.580816'
 	city = 'bordeaux'
+	unit = 'metric
 	key = '4cba0b113794f3bad84b2b022be28215'
 	# request = f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={key}'
-	request = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={key}&units=metric"
+	request = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={key}&units={unit}"
 	print(request)
 	r = requests.get(request)
 	return r.json()
