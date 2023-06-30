@@ -16,10 +16,6 @@ def request_data():
 
 def parse_data(data_to):
 	data = {}
-	"""print(data_to)
-	for key in list(data_to.keys()):
-		print(key)
-		print(data_to[key])"""
 	data_temp = data_to['weather'][0]
 	data['weather'] = data_temp['main']
 	data['description'] = data_temp['description']
